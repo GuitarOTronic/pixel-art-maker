@@ -20,8 +20,8 @@
 .grid{
     padding: 4rem 4rem 2rem 4rem;
     background-color: #fafafa;
-    border: 1px solid blue;
-
+    border: 1px solid lightblue;
+    border-radius: 3px;
 }
 .colors{
   justify-content: left;
@@ -35,6 +35,17 @@
   /*border: 1px solid purple;*/
   margin:  2rem 1rem 1rem 0;
 }
+.currentColor{
+  height: 4rem;
+  width: 4rem;
+  border:.5px solid black;
+  margin:  2rem 1rem 1rem 3rem;
+  /*justify-content: right;*/
+  text-align: center;
+  /*background: #2d2d2d;*/
+  color:#2d2d2d;
+
+}
 
 .red{
   background-color: red;
@@ -44,4 +55,13 @@
 }
 .green{
   background-color: green;
+}
+.blue{
+  background-color: lightblue;
+}
+.purple{
+  background-color:  purple;
+}
+.lime{
+  background-color:blue;
 }

@@ -2,30 +2,31 @@
 
 
 var cells = document.getElementsByClassName('cell')
-console.log(cells)
+
+var brushColor=''
+
 
 
 for(let i =0; i<cells.length; i++){
   cells[i].addEventListener('click', function(event){
 
-    event.target.style.backgroundColor='tomato'
-    //console.log(cells[i])
+    event.target.style.backgroundColor=brushColor;
+  // console.log(cells[i])
 
 })
 }
 
-var brushColor = document.getElementsByClassName('swatch')
+var colors = document.getElementsByClassName('swatch')
 
-for(let x = 0; x<brushColor.length; x++){
-  brushColor[x].addEventListener('click', function(event){
+for(let x = 0; x<colors.length; x++){
+  colors[x].addEventListener('click', function(event){
+    brushColor=colors[x].classList[0]
 
-    event.target.
+  var currentColor = document.getElementsByClassName('currentColor')[0]
 
-
-
+    currentColor.style.background=brushColor
+    console.log(currentColor)
+    // console.log(currentColor.background)
   })
-
-
-
 
 }
