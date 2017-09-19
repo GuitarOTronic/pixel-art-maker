@@ -3,15 +3,21 @@
 
 var cells = document.getElementsByClassName('cell')
 
-var brushColor=''
+var brushColor="red";
 
-
+var currentColor=brushColor
 
 for(let i =0; i<cells.length; i++){
-  cells[i].addEventListener('click', function(event){
+  cells[i].addEventListener('mouseover', function(event){
 
-    event.target.style.backgroundColor=brushColor;
-  // console.log(cells[i])
+    event.target.classList.add(brushColor);
+
+  if(cells[i].classList.length > 1){
+    let currentClass=cells[i].classList.item(1)
+  cells[i].classList.remove(currentClass)
+   }
+  cells[i].classList.add(brushColor)
+
 
 })
 }
@@ -22,11 +28,14 @@ for(let x = 0; x<colors.length; x++){
   colors[x].addEventListener('click', function(event){
     brushColor=colors[x].classList[0]
 
-  var currentColor = document.getElementsByClassName('currentColor')[0]
+     currentColor = document.getElementsByClassName('currentColor')[0]
 
-    currentColor.style.background=brushColor
-    console.log(currentColor)
-    // console.log(currentColor.background)
+   if(currentColor.classList.length > 1){
+     let currentClass=currentColor.classList.item(1)
+   currentColor.classList.remove(currentClass)
+    }
+   currentColor.classList.add(brushColor)
+
   })
 
 }
